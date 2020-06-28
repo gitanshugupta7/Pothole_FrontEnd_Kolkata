@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "potholefrontend"
+    }
+  },
+  "defaultProject": "potholefrontend",
+  "cli": {
+    "analytics": "ed0375b6-09cd-495f-a255-b1705b0e565d"
+  }
 }
