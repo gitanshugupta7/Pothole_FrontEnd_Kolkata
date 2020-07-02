@@ -1,1 +1,31 @@
-<p>main works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3 ward">
+      <div class="ward-info">
+        <h1>Mr. Gupta</h1>
+        <p>Ward No : <span>108</span></p>
+        <p>Address : <span>150N, Binoba Bhave Road, New Alipore</span></p>
+        <p>Kolkata : <span>700038</span></p>
+      </div>
+
+      <div>
+        <button class="ward-btn recent" routerLink="/recents">Recent</button>
+        <button class="ward-btn completed" routerLink="/completed">
+          Completed
+        </button>
+        <button class="ward-btn ongoing">Ongoing</button>
+      </div>
+    </div>
+
+    <div class="col-sm-9 hero-section">
+      <h1 class="hero-header">Recent</h1>
+      <div class="hero-table">
+        <router-outlet></router-outlet>
+      </div>
+      <div class="hero-mis"></div>
+      <div class="hero-mis-other" style="margin-left: 25rem;"></div>
+      <div class="hero-mis-other" style="margin-left: 47rem;"></div>
+      <div class="hero-mis-other" style="margin-left: 69rem;"></div>
+    </div>
+  </div>
+</div>
