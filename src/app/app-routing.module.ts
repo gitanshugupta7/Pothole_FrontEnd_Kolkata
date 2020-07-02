@@ -1,11 +1,24 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { MainComponent } from './main/main.component';
+import { RecentsComponent } from './main/recents/recents.component';
+import { CompletedComponent } from './main/completed/completed.component';
 
-
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'login', component: LoginComponent },
+  {
+    path: '',
+    children: [
+      { path: 'recents', component: RecentsComponent },
+      { path: 'completed', component: CompletedComponent },
+    ],
+    component: MainComponent,
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

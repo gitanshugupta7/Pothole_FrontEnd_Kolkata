@@ -1,0 +1,86 @@
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 30%;
+  }
+  .logo {
+    .logo-image {
+      margin: 4rem 0 0 6rem;
+    }
+  }
+  .form {
+    margin: 8rem 10rem 0 10rem !important;
+    line-height: 5rem !important;
+  }
+}
+
+$bg-colour1: #e3b697;
+$bg-colour2: #dbf6f1;
+$font-color: #52546b;
+
+.container {
+  max-width: 1280px;
+  padding: 0 !important;
+}
+.row {
+  padding: 0 !important;
+}
+
+.banner {
+  margin: 7rem 0 0 0;
+  .banner-text {
+    font-family: SFTHeavy;
+    font-size: 4rem;
+    color: white;
+    background-color: $bg-colour1;
+    padding: 1rem 2rem 1rem 1rem;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.36);
+  }
+}
+.logo {
+  margin: 4rem 0 0 18rem;
+  .logo-image {
+    width: 50%;
+    height: auto;
+  }
+}
+
+.form {
+  background-color: $bg-colour2;
+  padding: 4rem 2rem 4rem 2rem;
+  margin: 12rem 3rem 0 0;
+  border-radius: 20px;
+  line-height: 3rem;
+  box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.36);
+  .form-header {
+    font-family: SFTHeavy;
+    font-size: 3rem;
+    color: $font-color;
+    text-align: center;
+    margin: 0 0 3rem 0;
+  }
+  .formtext {
+    font-family: SFTHeavy;
+    font-size: 2rem;
+    color: $font-color;
+    margin: 2rem 0;
+  }
+  .form-control {
+    border: 0;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-family: SFTHeavy;
+    border-radius: 1rem;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
+  }
+  .form-buttom {
+    font-family: SFTHeavy;
+    font-size: 1.5rem;
+    margin: 3rem 0 0 0;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #8fa5ef;
+    border: 0;
+  }
+}
