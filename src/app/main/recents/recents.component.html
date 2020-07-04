@@ -5,15 +5,23 @@
         <table>
            <tr>
              <th>Complaint ID</th>
-             <th>Status</th>
              <th>Ward No</th>
              <th>No Of Reporters</th>
+             <th>Status</th>
+             <th>Accept</th>
+             <th>Decline</th>
            </tr>
-           <tr *ngFor="let pothole of pothole" >
+           <tr *ngFor="let pothole of pothole">
              <td>{{pothole.complaint_id}}</td>
-             <td>{{pothole.status}}</td>
              <td>{{pothole.ward_no}}</td>
              <td>{{pothole.no_of_reporters}}</td>
+             <td>{{pothole.status}}</td>
+             <td>
+               <button (click)="passtoapi(pothole.id, pothole.complaint_id, pothole.ward_no, pothole.no_of_reporters)">Yes</button>
+             </td>
+             <td>
+               <button>No</button>
+             </td>
            </tr>
         </table>
       </div>

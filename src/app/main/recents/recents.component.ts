@@ -11,10 +11,28 @@ export class RecentsComponent implements OnInit {
  
   pothole : Object;
 
-  ngOnInit(): void {
-    this.dataService.testData().subscribe((res) => {
+  passtoapi(id1 : any, complaint_id1 : any, ward_no1 : any, no_of_reporters1 : any){
+    let body = {
+      id: id1,
+      complaint_id: complaint_id1,
+      status: "C",
+      ward_no: ward_no1,
+      no_of_reporters: no_of_reporters1,
+      feedback_flag: false,
+    }
+    this.dataService.testData2(body).subscribe((res)=>{
+         console.log(res);
+         this.loaddata();
+    });
+  }
+  loaddata(){
+    this.dataService.testData1().subscribe((res) => {
       this.pothole = res
       console.log(res);
-    });
+  });
+}
+
+  ngOnInit(): void {
+    this.loaddata();
   }
 }
