@@ -1,1 +1,22 @@
-<p>recents works!</p>
+<div class="row hero-section">
+    <h1 class="hero-header">Recents</h1>
+      <div class="hero-table">
+        
+        <table>
+           <tr>
+             <th>Complaint ID</th>
+             <th>Status</th>
+             <th>Ward No</th>
+             <th>No Of Reporters</th>
+           </tr>
+           <tr *ngFor="let pothole of pothole" >
+             <td>{{pothole.complaint_id}}</td>
+             <td>{{pothole.status}}</td>
+             <td>{{pothole.ward_no}}</td>
+             <td>{{pothole.no_of_reporters}}</td>
+           </tr>
+        </table>
+      </div>
+</div>
+
+

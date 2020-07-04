@@ -9,23 +9,14 @@
       </div>
 
       <div>
-        <button class="ward-btn recent" routerLink="/recents">Recent</button>
-        <button class="ward-btn completed" routerLink="/completed">
-          Completed
-        </button>
-        <button class="ward-btn ongoing">Ongoing</button>
+        <button class="ward-btn recent" routerLink="/recents">Recent<span style="margin: 0 0 0 13rem;">20</span></button>
+        <button class="ward-btn completed" routerLink="/completed">Completed<span style="margin: 0 0 0 9rem;">20</span></button>
+        <button class="ward-btn ongoing" routerLink="/ongoing">Ongoing<span style="margin: 0 0 0 11rem;">20</span></button>
       </div>
     </div>
 
     <div class="col-sm-9 hero-section">
-      <h1 class="hero-header">Recent</h1>
-      <div class="hero-table">
         <router-outlet></router-outlet>
-      </div>
-      <div class="hero-mis"></div>
-      <div class="hero-mis-other" style="margin-left: 25rem;"></div>
-      <div class="hero-mis-other" style="margin-left: 47rem;"></div>
-      <div class="hero-mis-other" style="margin-left: 69rem;"></div>
     </div>
   </div>
 </div>

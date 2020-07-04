@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
 import { RecentsComponent } from './main/recents/recents.component';
 import { CompletedComponent } from './main/completed/completed.component';
+import { OngoinComponent } from './main/ongoin/ongoin.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { CompletedComponent } from './main/completed/completed.component';
     MainComponent,
     RecentsComponent,
     CompletedComponent,
+    OngoinComponent,
   ],
   imports: [HttpClientModule, BrowserModule, AppRoutingModule],
   providers: [],

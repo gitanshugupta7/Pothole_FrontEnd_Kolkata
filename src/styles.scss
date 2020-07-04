@@ -20,9 +20,19 @@
   src: url("/assets/fonts/SF-Pro-Text-Regular.otf");
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 720px) {
+  html {
+    font-size: 40%;
+  }
+}
+@media screen and (min-width: 889px) {
   html {
     font-size: 50%;
+  }
+}
+@media screen and (min-width: 950px) {
+  html {
+    font-size: 56%;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -30,3 +40,6 @@
     font-size: 62.5%;
   }
 }
+$bg-colour1: #e3b697;
+$bg-colour2: #dbf6f1;
+$font-color: #52546b;

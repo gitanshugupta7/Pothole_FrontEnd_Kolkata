@@ -9,6 +9,6 @@ export class DataService {
   constructor(private http: HttpClient) {}
 
   testData(): Observable<any> {
-    return this.http.get('https://reqres.in/api/users?page=2');
+    return this.http.get('http://127.0.0.1:8000/pothole/');
   }
 }

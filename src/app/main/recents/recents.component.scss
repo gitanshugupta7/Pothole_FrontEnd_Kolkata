@@ -1,0 +1,28 @@
+$bg-colour1: #e3b697;
+$bg-colour2: #dbf6f1;
+$font-color: #52546b;
+
+
+.hero-section {
+    position: relative;
+    .hero-header {
+      position: absolute;
+      top: 1rem;
+      font-family: SFTHeavy;
+      font-size: 4rem;
+      color: $font-color;
+      margin: 0 0 0 3rem;
+    }
+    .hero-table {
+      position: absolute;
+      top: 7rem;
+      margin: 0 0 0 3rem;
+      background-color: $bg-colour2;
+      width: 90%;
+      height: 50rem;
+      border-radius: 1rem;
+      box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.36);
+    }
+   
+  }
+  

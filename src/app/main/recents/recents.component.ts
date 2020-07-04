@@ -8,9 +8,12 @@ import { DataService } from '../data.service';
 })
 export class RecentsComponent implements OnInit {
   constructor(private dataService: DataService) {}
+ 
+  pothole : Object;
 
   ngOnInit(): void {
     this.dataService.testData().subscribe((res) => {
+      this.pothole = res
       console.log(res);
     });
   }
