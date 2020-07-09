@@ -19,10 +19,22 @@ $font-color: #52546b;
       margin: 0 0 0 3rem;
       background-color: $bg-colour2;
       width: 90%;
-      height: 50rem;
+      height: 45rem;
       border-radius: 1rem;
       box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.36);
     }
-   
+    #hero-table-header1{
+      font-size: 2rem;
+      font-family: SFTSemiBold;
+      padding: 1rem 20rem 1rem 3rem;
+      color: $font-color; 
+    }
+    #hero-table-header2{
+      font-size: 2rem;
+      font-family: SFTSemiBold;
+      padding: 1rem 3rem 1rem 3rem;
+      color: $font-color; 
+
+    }
   }
   

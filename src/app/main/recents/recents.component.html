@@ -4,12 +4,11 @@
         
         <table>
            <tr>
-             <th>Complaint ID</th>
-             <th>Ward No</th>
-             <th>No Of Reporters</th>
-             <th>Status</th>
-             <th>Accept</th>
-             <th>Decline</th>
+             <th id="hero-table-header1">Address</th>
+             <th id="hero-table-header2">Image</th>
+             <th id="hero-table-header3">No Of Reporters</th>
+             <th id="hero-table-header4">Accept/</th>
+             <th id="hero-table-header4">Decline</th>
            </tr>
            <tr *ngFor="let pothole of pothole">
              <td>{{pothole.complaint_id}}</td>
@@ -17,11 +16,12 @@
              <td>{{pothole.no_of_reporters}}</td>
              <td>{{pothole.status}}</td>
              <td>
-               <button (click)="passtoapi(pothole.id, pothole.complaint_id, pothole.ward_no, pothole.no_of_reporters)">Yes</button>
+               <button (click)="passtoapi(pothole.id, pothole.complaint_id, pothole.ward_no, pothole.no_of_reporters, pothole.image)">Yes</button>
              </td>
              <td>
                <button>No</button>
              </td>
+             <!-- <td><img src={{pothole.image}}/></td> -->
            </tr>
         </table>
       </div>
