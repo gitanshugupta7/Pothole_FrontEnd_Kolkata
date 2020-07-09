@@ -4,8 +4,13 @@
         <table>
           <tr>
             <th id="hero-table-header1">Address</th>
-            <th id="hero-table-header2">Date Of Completion</th>
             <th id="hero-table-header3">Mark As Complete</th>
+          </tr>
+          <tr *ngFor = "let pothole of pothole">
+            <td id="table-address">{{pothole.address}}</td>
+            <td>
+              <button class="data-completebutton" (click)= "OngoingToCompleted(pothole.complaint_id)"></button>
+            </td>
           </tr>
         </table>
       </div>

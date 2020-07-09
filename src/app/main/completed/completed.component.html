@@ -6,6 +6,9 @@
             <th id="hero-table-header1">Address</th>
             <th id="hero-table-header2">Date Of Completion</th>
           </tr>
+          <tr *ngFor = "let pothole of pothole">
+            <td id="table-address">{{pothole.address}}</td>
+          </tr>
         </table> 
       </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-completed',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompletedComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataService: DataService) {}
+ 
+  pothole : Object;
+
+  loaddata(){
+    this.dataService.testData1("Completed").subscribe((res) => {
+      this.pothole = res
+      console.log(res);
+  });
+}
 
   ngOnInit(): void {
+    this.loaddata();
   }
-
 }

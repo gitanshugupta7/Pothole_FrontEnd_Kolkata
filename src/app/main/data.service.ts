@@ -8,10 +8,13 @@ import { Observable } from 'rxjs';
 export class DataService {
   constructor(private http: HttpClient) {}
 
-  testData1(): Observable<any> {
-    return this.http.get('http://127.0.0.1:8000/pothole/');
+  testData1(str:string): Observable<any> {
+    return this.http.get('http://127.0.0.1:8000/pothole/'+str+'/');
   }
    testData2(body:any): Observable<any> {
-     return this.http.put('http://127.0.0.1:8000/pothole/'+body.id+'/' ,body);
+     return this.http.put('http://127.0.0.1:8000/pothole/'+body.complaint_id, body);
   }
+  testData3(body:any): Observable<any> {
+    return this.http.delete('http://127.0.0.1:8000/pothole/'+body.complaint_id, body);
+ }
 }
