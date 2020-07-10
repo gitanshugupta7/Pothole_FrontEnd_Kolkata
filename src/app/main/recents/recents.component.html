@@ -1,30 +1,48 @@
 <div class="row hero-section">
-    <h1 class="hero-header">Recents</h1>
-      <div class="hero-table">
-        <table>
-           <tr>
-             <th id="hero-table-header1">Address</th>
-             <th id="hero-table-header2">Image</th>
-             <th id="hero-table-header3">Reporters</th>
-             <th id="hero-table-header4">Accept/</th>
-             <th id="hero-table-header4">Decline</th>
-           </tr>
-           <tr *ngFor = "let pothole of pothole">
-             <td class="data-address"><a href="http://maps.google.com/maps?q={{pothole.coordinates}}" target="_blank">{{pothole.address}}</a></td>
-             <td><a><img class="data-imageicon" src="/assets/image_logo.png"></a></td>
-             <td class="data-count">{{pothole.no_of_reporters}}</td>
-             <td>
-               <button class="data-yesbutton" (click)= "RecentToOngoing(pothole.complaint_id)"></button>
-             </td>
-             <td>
-              <button class="data-nobutton" (click)= "RecentToDeleted(pothole.complaint_id)"></button>
-            </td>
-           </tr>
-        </table>
-      </div>
-
-      
-
+  <h1 class="hero-header">Recents</h1>
+  <div class="hero-table">
+    <table>
+      <tr>
+        <th id="hero-table-header1">Address</th>
+        <th id="hero-table-header2">Image</th>
+        <th id="hero-table-header3">Reporters</th>
+        <th id="hero-table-header4">Accept/</th>
+        <th id="hero-table-header4">Decline</th>
+      </tr>
+      <tr *ngFor="let pothole of pothole">
+        <td class="data-address">
+          <a
+            href="http://maps.google.com/maps?q={{ pothole.coordinates }}"
+            target="_blank"
+            >{{ pothole.address }}</a
+          >
+        </td>
+        <td>
+          <img
+            class="data-imageicon"
+            src="/assets/image_logo.png"
+            (click)="
+              showThisImage('http://insomnia.rest/images/screens/main.png')
+            "
+          />
+        </td>
+        <td class="data-count">{{ pothole.no_of_reporters }}</td>
+        <td>
+          <button
+            class="data-yesbutton"
+            (click)="RecentToOngoing(pothole.complaint_id)"
+          ></button>
+        </td>
+        <td>
+          <button
+            class="data-nobutton"
+            (click)="RecentToDeleted(pothole.complaint_id)"
+          ></button>
+        </td>
+      </tr>
+    </table>
+  </div>
 </div>
-
-
+<div class="lightbox" *ngIf="showImage" (click)="showImage = false">
+  <img src="{{ imageURL }}" />
+</div>
