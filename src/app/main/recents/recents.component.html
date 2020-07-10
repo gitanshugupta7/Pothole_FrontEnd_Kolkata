@@ -11,7 +11,7 @@
            </tr>
            <tr *ngFor = "let pothole of pothole">
              <td class="data-address"><a href="http://maps.google.com/maps?q={{pothole.coordinates}}" target="_blank">{{pothole.address}}</a></td>
-             <td><img class="data-imageicon" src="/assets/image_logo.png"></td>
+             <td><a><img class="data-imageicon" src="/assets/image_logo.png"></a></td>
              <td class="data-count">{{pothole.no_of_reporters}}</td>
              <td>
                <button class="data-yesbutton" (click)= "RecentToOngoing(pothole.complaint_id)"></button>
