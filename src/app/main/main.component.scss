@@ -77,24 +77,31 @@ $font-color: #52546b;
     font-family: SFTSemiBold;
     font-size: 2rem;
     border: 0;
-    background-color: rgba($color: #ffd102, $alpha: 0.6);
+    background-color: rgba($color: #ffd102, $alpha: 0.8);
     border-radius: 1.5rem;
     margin: 0 0 1rem 4rem;
     &:hover {
-      background-color: rgba($color: #ffd102, $alpha: 1);
+      background-color: rgba($color: white, $alpha: 1);
     }
+  }
+  .active{
+    background-color: rgba($color: white, $alpha: 1);
+    box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.2);
   }
   .recent {
     top: 31rem;
     padding: 1rem 1rem 1rem 3rem;
+    outline: none;
   }
   .completed {
     top: 37rem;
     padding: 1rem 1rem 1rem 3rem;
+    outline: none;
   }
   .ongoing {
     top: 43rem;
     padding: 1rem 1rem 1rem 3rem;
+    outline: none;
   }
 }
 

@@ -30,6 +30,10 @@ $font-color: #52546b;
       }
     #table-address{
       padding: 1rem 0 1rem 3rem;
+      cursor: pointer;
+       a{
+         color: $font-color;
+       }
     }
     #hero-table-header1{
       font-size: 2rem;
@@ -42,7 +46,9 @@ $font-color: #52546b;
       font-family: SFTSemiBold;
       padding: 1rem 3rem 1rem 8rem;
       color: $font-color; 
-
     }
+   #table-date{
+     padding: 1rem 0 1rem 11rem;
+   }
   }
   

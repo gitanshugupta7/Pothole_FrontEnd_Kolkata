@@ -7,7 +7,8 @@
             <th id="hero-table-header2">Date Of Completion</th>
           </tr>
           <tr *ngFor = "let pothole of pothole">
-            <td id="table-address">{{pothole.address}}</td>
+            <td id="table-address"><a href="http://maps.google.com/maps?q={{pothole.coordinates}}" target="_blank">{{pothole.address}}</a></td>
+            <td id="table-date">{{pothole.completed_timestamp | date:"dd/MM/yyyy"}}</td>
           </tr>
         </table> 
       </div>

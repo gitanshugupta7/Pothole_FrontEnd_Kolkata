@@ -7,7 +7,7 @@ import { CompletedComponent } from './main/completed/completed.component';
 import { OngoinComponent } from './main/ongoin/ongoin.component';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent, },
+  { path: '', component: LoginComponent, },
   {
     path: '',
     children: [

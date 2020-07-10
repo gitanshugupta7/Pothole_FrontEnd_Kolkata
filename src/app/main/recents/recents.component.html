@@ -10,7 +10,7 @@
              <th id="hero-table-header4">Decline</th>
            </tr>
            <tr *ngFor = "let pothole of pothole">
-             <td class="data-address">{{pothole.address}}</td>
+             <td class="data-address"><a href="http://maps.google.com/maps?q={{pothole.coordinates}}" target="_blank">{{pothole.address}}</a></td>
              <td><img class="data-imageicon" src="/assets/image_logo.png"></td>
              <td class="data-count">{{pothole.no_of_reporters}}</td>
              <td>
@@ -22,6 +22,9 @@
            </tr>
         </table>
       </div>
+
+      
+
 </div>
 
 
