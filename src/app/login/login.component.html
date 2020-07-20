@@ -16,10 +16,9 @@
         <div class="form-group">
           <label class="formtext" for="exampleInputEmail1">WARD NO:</label>
           <input
-            type="email"
             class="form-control"
             id="exampleInputEmail1"
-            aria-describedby="emailHelp"
+            [formControl] = "ward_no"
           />
         </div>
         <div class="form-group">
@@ -31,7 +30,7 @@
           />
         </div>
         <button type="submit" class="btn btn-primary form-buttom" >
-          <a routerLink="/recents">SUBMIT</a>
+          <a (click)="loginfunction()">SUBMIT</a>
         </button>
       </form>
     </div>

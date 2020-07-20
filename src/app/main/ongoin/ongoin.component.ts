@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-ongoin',
@@ -8,9 +9,10 @@ import { DataService } from '../data.service';
 })
 export class OngoinComponent implements OnInit {
 
- constructor(private dataService: DataService) {}
+ constructor(private dataService: DataService, private router : ActivatedRoute) {}
  
   pothole : Object;
+  ward_no : any;
 
   OngoingToCompleted(complaint_id1 : any){
     let body = { 
@@ -24,13 +26,18 @@ export class OngoinComponent implements OnInit {
   }
 
   loaddata(){
-    this.dataService.testData1("Ongoing").subscribe((res) => {
+    this.dataService.testData1("Ongoing", this.ward_no).subscribe((res) => {
       this.pothole = res
       console.log(res);
   });
 }
 
   ngOnInit(): void {
-    this.loaddata();
+    this.router.parent.paramMap.subscribe((param)=>{
+      console.log(param)
+      this.ward_no = param.get("ward_no")
+      console.log(this.ward_no)
+      this.loaddata();
+   });
   }
 }

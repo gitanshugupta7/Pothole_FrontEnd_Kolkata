@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-recents',
@@ -7,9 +8,11 @@ import { DataService } from '../data.service';
   styleUrls: ['./recents.component.scss'],
 })
 export class RecentsComponent implements OnInit {
-  constructor(private dataService: DataService) {}
+
+  constructor(private dataService: DataService, private router : ActivatedRoute) {}
 
   pothole: Object;
+  ward_no : any;
 
   imageURL = 'http://insomnia.rest/images/screens/main.png';
   showImage = false;
@@ -35,18 +38,28 @@ export class RecentsComponent implements OnInit {
   }
 
   loaddata() {
-    this.dataService.testData1('Recent').subscribe((res) => {
-      this.pothole = res;
-      console.log(res);
+    this.dataService.testData1('Recent',this.ward_no).subscribe((res) => {
+      for(var d of res)
+        {
+          if(d['pothole_image'] != null)
+          {
+            d['pothole_image'] = 'http://127.0.0.1:8000' + d['pothole_image'];
+  
+          }
+        }
+       this.pothole = res;
     });
   }
 
   ngOnInit(): void {
-    this.loaddata();
+    this.router.parent.paramMap.subscribe((param)=>{
+      this.ward_no = param.get("ward_no")
+      this.loaddata();
+   });
   }
 
-  showThisImage(srcURl: any) {
-    this.imageURL = srcURl;
+  showThisImage(srcURL : any) {
     this.showImage = true;
+    this.imageURL = srcURL;
   }
 }

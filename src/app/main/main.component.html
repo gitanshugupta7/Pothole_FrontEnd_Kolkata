@@ -3,16 +3,19 @@
     <div class="col-sm-3 ward">
       <div class="ward-info">
         <h1>Mr. Gupta</h1>
-        <p>Ward No : <span>108</span></p>
+        <p>Ward No : <span>{{ward_no}}</span></p>
         <p>Address : <span>150N, Binoba Bhave Road, New Alipore</span></p>
         <p>Kolkata : <span>700038</span></p>
       </div>
 
       <div>
-        <button class="ward-btn recent" routerLink="/recents" routerLinkActive="active">Recent<span style="margin: 0 0 0 13rem;">..</span></button>
-        <button class="ward-btn completed" routerLink="/completed" routerLinkActive="active">Completed<span style="margin: 0 0 0 9rem;">..</span></button>
-        <button class="ward-btn ongoing" routerLink="/ongoing" routerLinkActive="active">Ongoing<span style="margin: 0 0 0 11rem;">..</span></button>
+        <button class="ward-btn recent" *ngIf="ward_no" [routerLink]="['recents']" routerLinkActive="active">Recent<span style="margin: 0 0 0 13rem;">{{mis_info.recent}}</span></button>
+        <button class="ward-btn completed" routerLink="completed" routerLinkActive="active">Completed<span style="margin: 0 0 0 9rem;">{{mis_info.completed}}</span></button>
+        <button class="ward-btn ongoing" routerLink="ongoing" routerLinkActive="active">Ongoing<span style="margin: 0 0 0 11rem;">{{mis_info.ongoing}}</span></button>
+        <a class="logout-button" ><img src="/assets/login-24px.svg"/></a>
+        <p class="logout-text">LOGOUT</p>
       </div>
+
     </div>
 
     <div class="col-sm-9 hero-section">

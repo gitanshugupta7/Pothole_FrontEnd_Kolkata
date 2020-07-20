@@ -103,6 +103,33 @@ $font-color: #52546b;
     padding: 1rem 1rem 1rem 3rem;
     outline: none;
   }
+  .logout-button{
+    position: absolute;
+    top: 59rem;
+    margin: 0 0 0 2.5rem;
+    cursor: pointer;
+    &:hover{
+      filter: grayscale(100%);
+    }
+  }
+  .logout-text{
+    position: absolute;
+    top: 61.5rem;
+    font-size: 2rem;
+    font-family: SFTHeavy;
+    cursor: pointer;
+    &:hover{
+      color: grey;
+    }
+  }
+  .piechart{
+    position: absolute;
+    height: 15rem !important;
+    width: auto !important;
+    top: 50rem;
+    left: 23rem;
+  }
 }
+
 
 

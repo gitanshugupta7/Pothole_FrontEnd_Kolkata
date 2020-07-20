@@ -9,8 +9,9 @@ import { OngoinComponent } from './main/ongoin/ongoin.component';
 const routes: Routes = [
   { path: '', component: LoginComponent, },
   {
-    path: '',
+    path: ':ward_no',
     children: [
+      { path: '', redirectTo: 'recents', pathMatch: 'full' },
       { path: 'recents', component: RecentsComponent },
       { path: 'completed', component: CompletedComponent },
       { path: 'ongoing', component: OngoinComponent },
