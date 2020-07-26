@@ -8,7 +8,10 @@ import { MainComponent } from './main/main.component';
 import { RecentsComponent } from './main/recents/recents.component';
 import { CompletedComponent } from './main/completed/completed.component';
 import { OngoinComponent } from './main/ongoin/ongoin.component';
-import { FormsModule,ReactiveFormsModule } from '@angular/forms'
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { StatisticsComponent } from './main/statistics/statistics.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+
 
 @NgModule({
   declarations: [
@@ -18,8 +21,9 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms'
     RecentsComponent,
     CompletedComponent,
     OngoinComponent,
+    StatisticsComponent,
   ],
-  imports: [HttpClientModule, BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [HttpClientModule, BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, NgxChartsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

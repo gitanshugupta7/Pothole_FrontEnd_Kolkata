@@ -2,14 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../main/data.service';
 import { ActivatedRoute } from '@angular/router';
 
+
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
+  
 
-  constructor(private dataService: DataService, private router : ActivatedRoute) { }
+  constructor(private dataService: DataService, private router : ActivatedRoute) {  }
 
   ward_no : any;
   mis_info : any;
@@ -21,6 +23,8 @@ export class MainComponent implements OnInit {
       //  this.piechart();
     });
   }
+
+ 
 
   // piechart(){
   //   var chart = new CanvasJS.Chart("chartContainer", {

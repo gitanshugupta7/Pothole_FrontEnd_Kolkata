@@ -71,6 +71,17 @@ $font-color: #52546b;
       color: $font-color;
       font-size: 2rem;
     }
+    .stats-button{
+      width: 6rem;
+      height: 4rem;
+      background-color: white;
+      border-radius: 1rem;
+      outline: none;
+      box-shadow: 0 5px 3px 0 rgba(90, 90, 90, 0.36);
+      &:hover{
+        box-shadow: 0 5px 10px 0 rgba(97, 97, 97, 0.36);;
+      }
+    }
   }
   .ward-btn {
     position: absolute;
@@ -89,17 +100,17 @@ $font-color: #52546b;
     box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.2);
   }
   .recent {
-    top: 31rem;
+    top: 33rem;
     padding: 1rem 1rem 1rem 3rem;
     outline: none;
   }
   .completed {
-    top: 37rem;
+    top: 39rem;
     padding: 1rem 1rem 1rem 3rem;
     outline: none;
   }
   .ongoing {
-    top: 43rem;
+    top: 45rem;
     padding: 1rem 1rem 1rem 3rem;
     outline: none;
   }

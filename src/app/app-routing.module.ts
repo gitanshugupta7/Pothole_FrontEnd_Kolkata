@@ -5,6 +5,7 @@ import { MainComponent } from './main/main.component';
 import { RecentsComponent } from './main/recents/recents.component';
 import { CompletedComponent } from './main/completed/completed.component';
 import { OngoinComponent } from './main/ongoin/ongoin.component';
+import { StatisticsComponent} from './main/statistics/statistics.component'
 
 const routes: Routes = [
   { path: '', component: LoginComponent, },
@@ -15,6 +16,7 @@ const routes: Routes = [
       { path: 'recents', component: RecentsComponent },
       { path: 'completed', component: CompletedComponent },
       { path: 'ongoing', component: OngoinComponent },
+      { path: 'statistics', component: StatisticsComponent },
     ],
     component: MainComponent, 
   },

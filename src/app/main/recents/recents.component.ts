@@ -13,6 +13,7 @@ export class RecentsComponent implements OnInit {
 
   pothole: Object;
   ward_no : any;
+  obj : Object;
 
   imageURL = 'http://insomnia.rest/images/screens/main.png';
   showImage = false;
@@ -37,6 +38,7 @@ export class RecentsComponent implements OnInit {
     });
   }
 
+
   loaddata() {
     this.dataService.testData1('Recent',this.ward_no).subscribe((res) => {
       for(var d of res)
@@ -52,6 +54,7 @@ export class RecentsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
     this.router.parent.paramMap.subscribe((param)=>{
       this.ward_no = param.get("ward_no")
       this.loaddata();
