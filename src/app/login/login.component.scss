@@ -80,7 +80,28 @@ $font-color: #52546b;
     margin: 3rem 0 0 0;
     padding: 1rem;
     border-radius: 1rem;
-    background-color: #8fa5ef;
     border: 0;
+  }
+  .choose-council{
+    font-size: 1.5rem;
+    font-family: SFTLight;
+    padding: 1rem;
+    color: $font-color;
+    border-radius: 1rem !important;
+    background-color: white;
+    border: $font-color;
+    outline: none;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
+  }
+  .council-list{
+    font-size: 1.5rem;
+    font-family: SFTLight;
+    line-height: 3rem;
+    max-height: 15rem;
+    overflow-y: scroll;
+    border-radius: 1.5rem;
+    border: none;
+    padding: 0 2.6rem; 
+    cursor: pointer;
   }
 }

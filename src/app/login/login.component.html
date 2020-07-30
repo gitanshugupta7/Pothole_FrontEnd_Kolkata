@@ -11,8 +11,32 @@
     </div>
 
     <div class="col-sm-4">
+
       <form class="form">
         <p class="form-header">ACCOUNT LOGIN</p>
+
+        <div class="dropdown">
+          <button type="button" class="btn btn-primary dropdown-toggle choose-council" data-toggle="dropdown">
+            {{ council_name }}
+          </button>
+          <div class="dropdown-menu council-list">
+            <a class="dropdown-item" (click)="changename('Bicholim Municipal Council')" >Bicholim Municipal Council</a>
+            <a class="dropdown-item" (click)="changename('Canacona Municipal Council')">Canacona Municipal Council</a>
+            <a class="dropdown-item" (click)="changename('Cuncolim Municipal Council')">Cuncolim Municipal Council</a>
+            <a class="dropdown-item" (click)="changename('Curchorem Municipal Council')">Curchorem Municipal Council</a>
+            <a class="dropdown-item" (click)="changename('Mapusa Municipal Council')">Mapusa Municipal Council</a>
+            <a class="dropdown-item" (click)="changename('Margao Municipal Council')">Margao Municipal Council</a>
+            <a class="dropdown-item" (click)="changename('Mormugao Municipal Council')">Mormugao Municipal Council</a>
+            <a class="dropdown-item" (click)="changename('Panaji Municipal Corporation')">Panaji Municipal Corporation</a>
+            <a class="dropdown-item" (click)="changename('Pernem Municipal Council')">Pernem Municipal Council</a>
+            <a class="dropdown-item" (click)="changename('Ponda Municipal Council')">Ponda Municipal Council</a>
+            <a class="dropdown-item" (click)="changename('Quepem Municipal Council')">Quepem Municipal Council</a>
+            <a class="dropdown-item" (click)="changename('Sanguem Municipal Council')">Sanguem Municipal Council</a>
+            <a class="dropdown-item" (click)="changename('Sanquelim Municipal Council')">Sanquelim Municipal Council</a>
+            <a class="dropdown-item" (click)="changename('Valpoi Municipal Council')">Valpoi Municipal Council</a>
+          </div>
+        </div>  
+
         <div class="form-group">
           <label class="formtext" for="exampleInputEmail1">WARD NO:</label>
           <input
@@ -21,6 +45,7 @@
             [formControl] = "ward_no"
           />
         </div>
+
         <div class="form-group">
           <label class="formtext" for="exampleInputPassword1">PASSWORD</label>
           <input
@@ -29,10 +54,16 @@
             id="exampleInputPassword1"
           />
         </div>
+
         <button type="submit" class="btn btn-primary form-buttom" >
           <a (click)="loginfunction()">SUBMIT</a>
+
         </button>
+
       </form>
+
     </div>
+
   </div>
+
 </div>

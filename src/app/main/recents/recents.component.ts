@@ -41,6 +41,17 @@ export class RecentsComponent implements OnInit {
 
   loaddata() {
     this.dataService.testData1('Recent',this.ward_no).subscribe((res) => {
+      this.pothole = res.sort((obj1, obj2) => {
+        if (obj1.no_of_reporters > obj2.no_of_reporters) {
+            return -1;
+        }
+    
+        if (obj1.no_of_reporters < obj2.no_of_reporters) {
+            return 1;
+        }
+    
+        return 0;
+    });
       for(var d of res)
         {
           if(d['pothole_image'] != null)
@@ -49,7 +60,6 @@ export class RecentsComponent implements OnInit {
   
           }
         }
-       this.pothole = res;
     });
   }
 

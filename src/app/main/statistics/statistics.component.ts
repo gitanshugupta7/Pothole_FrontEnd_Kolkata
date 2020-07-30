@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { multi, single } from '../statistics/data';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { DataService } from '../data.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-statistics',
@@ -8,8 +10,16 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
   styleUrls: ['./statistics.component.scss']
 })
 export class StatisticsComponent implements OnInit {
-  multi: any[];
-  view: any[] = [600, 300];
+
+  graph_data: Object;
+  multi : any[];
+  view: any[] = [900, 300];
+
+  constructor(private dataService: DataService, private router : ActivatedRoute) 
+  { 
+    Object.assign(this, { multi });
+    Object.assign(this, { single });
+  }
 
   // options
   legend: boolean = true;
@@ -34,10 +44,12 @@ export class StatisticsComponent implements OnInit {
   colorScheme = {
     domain: ['#5AA454', '#E44D25', '#CFC0BB', '#7aa3e5', '#a8385d', '#aae3f5']
   };
-
-  constructor() 
-  { Object.assign(this, { multi });
-    Object.assign(this, { single });
+  
+  loadgraph(){
+    this.dataService.graph_data().subscribe((res) =>{
+       this.graph_data = res;
+       console.log(res);
+    });
   }
 
   onSelect(data): void {
@@ -53,7 +65,7 @@ export class StatisticsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
+    this.loadgraph();
   }
 
 }
