@@ -10,7 +10,7 @@ import { StatisticsComponent} from './main/statistics/statistics.component'
 const routes: Routes = [
   { path: '', component: LoginComponent, },
   {
-    path: ':ward_no',
+    path: ':council/:ward_no',
     children: [
       { path: '', redirectTo: 'recents', pathMatch: 'full' },
       { path: 'recents', component: RecentsComponent },

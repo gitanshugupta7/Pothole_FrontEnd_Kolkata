@@ -20,7 +20,7 @@
             {{ council_name }}
           </button>
           <div class="dropdown-menu council-list">
-            <a class="dropdown-item" (click)="changename('Bicholim Municipal Council')" >Bicholim Municipal Council</a>
+            <a class="dropdown-item" [formControl] = "council_name" (click)="changename('Asansol Muncipal Cooporation')" >Asansol Muncipal Cooporation</a>
             <a class="dropdown-item" (click)="changename('Canacona Municipal Council')">Canacona Municipal Council</a>
             <a class="dropdown-item" (click)="changename('Cuncolim Municipal Council')">Cuncolim Municipal Council</a>
             <a class="dropdown-item" (click)="changename('Curchorem Municipal Council')">Curchorem Municipal Council</a>

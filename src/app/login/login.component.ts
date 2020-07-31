@@ -12,11 +12,12 @@ export class LoginComponent implements OnInit {
   constructor(private route : Router) { }
    
   ward_no = new FormControl('');
-  council_name = 'Choose Your Council'
+  council_name = new FormControl('')
 
   loginfunction(){
      console.log(this.ward_no)
-     this.route.navigate([this.ward_no.value,'recents']);
+     console.log(this.council_name)
+     this.route.navigate([this.council_name,this.ward_no.value,'recents']);
      
   }
   changename(str:any){
