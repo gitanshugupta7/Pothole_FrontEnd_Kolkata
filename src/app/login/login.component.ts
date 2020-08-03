@@ -11,17 +11,17 @@ export class LoginComponent implements OnInit {
 
   constructor(private route : Router) { }
    
+  council = 'Choose Your Council'
   ward_no = new FormControl('');
-  council_name = new FormControl('')
+
 
   loginfunction(){
-     console.log(this.ward_no)
-     console.log(this.council_name)
-     this.route.navigate([this.council_name,this.ward_no.value,'recents']);
+     console.log(this.ward_no.value);
+     this.route.navigate([this.council,this.ward_no.value,'recents']);
      
   }
   changename(str:any){
-    this.council_name = str;
+    this.council = str;
   }
   
   ngOnInit(): void {

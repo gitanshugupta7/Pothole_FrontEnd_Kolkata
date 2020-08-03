@@ -20,7 +20,7 @@ export class DataService {
  mis_data(body:any){
    return this.http.get('http://127.0.0.1:8000/misdata/'+body);
  }
- graph_data(){
-  return this.http.get('http://127.0.0.1:8000/graphdata/');
+ graph_data(ward_no:any, str:any){
+  return this.http.get('http://127.0.0.1:8000/graph/'+ward_no+'/'+str+'/');
  }
 }

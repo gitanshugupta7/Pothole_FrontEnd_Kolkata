@@ -12,13 +12,15 @@ import { ActivatedRoute } from '@angular/router';
 export class StatisticsComponent implements OnInit {
 
   graph_data: Object;
-  multi : any[];
-  view: any[] = [900, 300];
+  ward_no : any;
+  pie_data : Object
+  pie_data_particular : Object
+
+  view: any[] = [700, 300];
 
   constructor(private dataService: DataService, private router : ActivatedRoute) 
   { 
-    Object.assign(this, { multi });
-    Object.assign(this, { single });
+   
   }
 
   // options
@@ -29,25 +31,35 @@ export class StatisticsComponent implements OnInit {
   yAxis: boolean = true;
   showYAxisLabel: boolean = true;
   showXAxisLabel: boolean = true;
-  xAxisLabel: string = 'Year';
-  yAxisLabel: string = 'Population';
+  yAxisLabel: string = 'No Of Potholes';
+  xAxisLabel: string = 'Date';
   timeline: boolean = true;
-
-  single: any[];
-
-  // options
-  gradient: boolean = true;
+  gradient: boolean = false;
   showLegend: boolean = true;
   isDoughnut: boolean = false;
   legendPosition: string = 'below';
 
   colorScheme = {
-    domain: ['#5AA454', '#E44D25', '#CFC0BB', '#7aa3e5', '#a8385d', '#aae3f5']
+    domain: ['#10DAD6', '#D5315E', '#FDC312', '#F8AD3E', '#E44A4C', '#FB7974']
   };
   
-  loadgraph(){
-    this.dataService.graph_data().subscribe((res) =>{
+  loadgraph1(){
+    this.dataService.graph_data(this.ward_no,'reg_vs_comp').subscribe((res) =>{
        this.graph_data = res;
+       console.log(res);
+    });
+  }
+
+  loadgraph2(){
+    this.dataService.graph_data(this.ward_no,'piedata_all').subscribe((res) =>{
+       this.pie_data = res;
+       console.log(res);
+    });
+  }
+
+  loadgraph3(){
+    this.dataService.graph_data(this.ward_no,'piedata_particular').subscribe((res) =>{
+       this.pie_data_particular = res;
        console.log(res);
     });
   }
@@ -65,7 +77,13 @@ export class StatisticsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.loadgraph();
+    this.router.parent.paramMap.subscribe((param)=>{
+      this.ward_no = param.get("ward_no")
+      console.log(this.ward_no)
+      this.loadgraph1();
+      this.loadgraph2();
+      this.loadgraph3();
+   });
   }
 
 }
